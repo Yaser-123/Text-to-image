@@ -38,7 +38,7 @@ npm run dev
 ```
 http://127.0.0.1:3000
 ```
-- or
+or
 ```
 http://localhost:3000
 ```
