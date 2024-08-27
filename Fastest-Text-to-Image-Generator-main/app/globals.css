@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
+@layer base {
+  :root {
+    --background: 340 20% 95%; /* Light pinkish background (#F7E7E7) */
+    --foreground: 340 50% 10%; /* Darker pink for main text (#4C2020) */
+    --card: 340 20% 98%; /* Slightly lighter pink for cards (#FAF3F3) */
+    --card-foreground: 340 50% 10%; /* Consistent with foreground for text on cards (#4C2020) */
+    --popover: 340 20% 98%; /* Same as card background for popovers (#FAF3F3) */
+    --popover-foreground: 340 50% 10%; /* Consistent with foreground for text on popovers (#4C2020) */
+    --primary: 340 50% 40%; /* Muted pink for primary elements (#CC7A7A) */
+    --primary-foreground: 0 0% 98%; /* Light color for text on primary elements (#FAFAFA) */
+    --secondary: 340 20% 85%; /* Very light pink for secondary elements (#E8D7D7) */
+    --secondary-foreground: 340 50% 10%; /* Dark pink for text on secondary elements (#4C2020) */
+    --muted: 340 20% 85%; /* Muted pink for less important elements (#E8D7D7) */
+    --muted-foreground: 340 10% 50%; /* Medium pink for muted text (#B38C8C) */
+    --accent: 340 50% 50%; /* Rich pink for accents and highlights (#E66E6E) */
+    --accent-foreground: 0 0% 98%; /* Light color for text on accent backgrounds (#FAFAFA) */
+    --destructive: 0 70% 50%; /* A strong red for destructive actions (#FF4D4D) */
+    --destructive-foreground: 0 0% 98%; /* Light color for text on destructive backgrounds (#FAFAFA) */
+    --border: 340 10% 50%; /* Darker pinkish-gray for borders (#B38C8C) */
+    --input: 340 15% 90%; /* Slightly darker pinkish input fields (#EAD6D6) */
+    --ring: 340 50% 50%; /* Rich pink for focus ring (#E66E6E) */
+    --radius: 0.3rem; /* Keep the same border radius for consistency */
+  }
+
+  .dark {
+    --background: 34 16% 13%; /* Dark muted brown (#28231D) */
+    --foreground: 0 0% 90%; /* Light gray for general text (#E5E5E5) */
+    --card: 34 16% 20%; /* Slightly lighter background for cards (#3C3730) */
+    --card-foreground: 0 0% 90%; /* Same as foreground for consistency */
+    --popover: 34 16% 20%; /* Consistent with card for popovers (#3C3730) */
+    --popover-foreground: 0 0% 90%; /* Consistent with foreground */
+    --primary: 240 100% 80%; /* A light, soft blue for primary elements (#B3D9FF) */
+    --primary-foreground: 240 5.9% 10%; /* Dark blue for text on primary elements */
+    --secondary: 240 5% 25%; /* Darker grayish blue for secondary elements (#4C4B63) */
+    --secondary-foreground: 0 0% 90%; /* Same as foreground for text */
+    --muted: 34 16% 20%; /* Muted elements, consistent with cards (#3C3730) */
+    --muted-foreground: 0 0% 70%; /* Lighter gray for muted text (#B3B3B3) */
+    --accent: 50 100% 50%; /* Bright yellow for accents and highlights (#FFD700) */
+    --accent-foreground: 0 0% 20%; /* Darker shade for text on accent elements */
+    --destructive: 0 70% 50%; /* A strong red for destructive actions (#FF4D4D) */
+    --destructive-foreground: 0 0% 98%; /* Light color for text on destructive backgrounds */
+    --border: 0 0% 50%; /* Medium gray for borders (#808080) */
+    --input: 0 0% 20%; /* Darker gray for input fields (#333333) */
+    --ring: 240 5.9% 60%; /* Light blue ring for focus states (#99CCFF) */
+ }
+
+
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
