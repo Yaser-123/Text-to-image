@@ -64,7 +64,7 @@ export default function Lightning() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      window.document.cookie = "fal-app=true; path=/; samesite=strict; secure;";
+      window.document.cookie = "fal-app=true; path=/; samesite=strict;";
     }
     // initial image
     connection.send({

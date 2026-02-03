@@ -1,7 +1,13 @@
 import { route } from "@fal-ai/serverless-proxy/nextjs";
 import { type NextRequest } from "next/server";
 
-const URL_ALLOW_LIST = ["https://rest.alpha.fal.ai/tokens/"];
+const URL_ALLOW_LIST = [
+  "https://rest.alpha.fal.ai/tokens/",
+  "https://queue.fal.run/",
+  "https://fal.run/",
+];
+
+
 
 export const POST = (req: NextRequest) => {
   const url = req.headers.get("x-fal-target-url");
@@ -9,7 +15,7 @@ export const POST = (req: NextRequest) => {
     return new Response("Not found", { status: 404 });
   }
 
-  if (!URL_ALLOW_LIST.includes(url)) {
+  if (!URL_ALLOW_LIST.some(allowed => url.startsWith(allowed))) {
     return new Response("Not allowed", { status: 403 });
   }
 
